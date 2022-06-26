@@ -1,5 +1,3 @@
 export class Address{
-
-    constructor(private street : string,private city : string){};
-
+    constructor(private street :string,private city:string){};
 }

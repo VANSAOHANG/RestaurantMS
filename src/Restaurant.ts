@@ -1,5 +1,12 @@
 import { Address } from "./Address";
+import { HumanManagement } from "./HumanManager/HumanManagement";
 
 export class Restaurant {
-    constructor(private name: string, private address: Address) { }
+    private address?:Address;
+    constructor(private name: string) { }
+
+    setRestaurantAddress(address:Address){
+        this.address = address;
+    }
+    public hr:HumanManagement = new HumanManagement();
 }

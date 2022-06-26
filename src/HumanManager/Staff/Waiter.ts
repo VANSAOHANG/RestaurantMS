@@ -19,4 +19,8 @@ export class Waiter extends Staff {
         }
         return false;
     }
+
+    createOrder(){
+        
+    }
 }

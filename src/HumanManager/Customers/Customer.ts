@@ -17,4 +17,12 @@ export class Customer extends Staff {
         }
         return false;
     }
+
+    makeOrder(){
+
+    }
+
+    // paymentStatus():boolean{
+
+    // }
 }
