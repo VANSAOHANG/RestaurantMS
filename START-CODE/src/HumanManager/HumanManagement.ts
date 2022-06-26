@@ -8,13 +8,13 @@ export class HumanManagement {
     getStaffs(){
         return this.staffs;
     }
-    addStaff(newStaff:Staff){
-        this.staffs.push(newStaff);
+    addStaff(...newStaff:Staff[]){
+        this.staffs=this.staffs.concat(newStaff);
     }
     getCustomers(){
         return this.customers;
     }
-    addCustomer(newCustomer:Staff){
-        this.staffs.push(newCustomer);
+    addCustomer(...newCustomer:Customer[]){
+        this.customers = this.customers.concat(newCustomer);
     }
 }
