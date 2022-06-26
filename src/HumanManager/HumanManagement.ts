@@ -1,5 +1,20 @@
+import { Customer } from "./Customers/Customer";
+import { Staff } from "./Staff/Staff";
 
+export class HumanManagement {
+    private staffs:Staff[] = [];
+    private customers:Customer[]=[];
 
-export class HumanManager {
- 
+    getStaffs(){
+        return this.staffs;
+    }
+    addStaff(...newStaff:Staff[]){
+        this.staffs=this.staffs.concat(newStaff);
+    }
+    getCustomers(){
+        return this.customers;
+    }
+    addCustomer(...newCustomer:Customer[]){
+        this.customers = this.customers.concat(newCustomer);
+    }
 }

@@ -19,4 +19,8 @@ export class Cheft extends Staff {
         }
         return false;
     }
+
+    takeOrder(){
+        
+    }
 }
