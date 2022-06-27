@@ -3,14 +3,17 @@ import { Staff, StaffCategory } from "./Staff";
 
 
 export class Waiter extends Staff {
+    protected phoneNumber?: number;
+
+
     private staffCategory: StaffCategory = StaffCategory.WAITER;
-    constructor(firstName: string, lastName: string, age: number, gender: Gender) {
-        super(firstName, lastName, age, gender);
+    constructor(name: string, age: number, gender: Gender) {
+        super(name, age, gender);
     }
 
     isEqual(other: Waiter): boolean {
         if (
-            this.firstName === other.firstName &&
+            this.name === other.name &&
             this.age === other.age &&
             this.gender === other.gender &&
             this.staffCategory === other.staffCategory
@@ -19,8 +22,10 @@ export class Waiter extends Staff {
         }
         return false;
     }
+    setPhone(newPhoneNumber: number): number {
+        return this.phoneNumber = newPhoneNumber;
+    }
+    createOrder() {
 
-    createOrder(){
-        
     }
 }

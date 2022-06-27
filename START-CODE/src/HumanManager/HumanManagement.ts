@@ -2,19 +2,19 @@ import { Customer } from "./Customers/Customer";
 import { Staff } from "./Staff/Staff";
 
 export class HumanManagement {
-    private staffs:Staff[] = [];
-    private customers:Customer[]=[];
+    private staffs: Staff[] = [];
+    private customers: Customer[] = [];
 
-    getStaffs(){
+    getStaffs() {
         return this.staffs;
     }
-    addStaff(...newStaff:Staff[]){
-        this.staffs=this.staffs.concat(newStaff);
+    addStaff(...newStaff: Staff[]) {
+        this.staffs = this.staffs.concat(newStaff);
     }
-    getCustomers(){
+    getCustomers() {
         return this.customers;
     }
-    addCustomer(...newCustomer:Customer[]){
+    addCustomer(...newCustomer: Customer[]) {
         this.customers = this.customers.concat(newCustomer);
     }
 }

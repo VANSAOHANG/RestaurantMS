@@ -1,15 +1,15 @@
 import { Gender, Person } from "../Person";
-import { Staff, StaffCategory } from "../Staff/Staff";
 
+export class Customer extends Person {
+    protected phoneNumber?: number;
 
-export class Customer extends Staff {
-    constructor(firstName: string, lastName: string, age: number, gender: Gender) {
-        super(firstName, lastName, age, gender);
+    constructor(name: string, age: number, gender: Gender) {
+        super(name, age, gender);
     }
 
     isEqual(other: Customer): boolean {
         if (
-            this.firstName === other.firstName &&
+            this.name === other.name &&
             this.age === other.age &&
             this.gender === other.gender
         ) {
@@ -17,8 +17,10 @@ export class Customer extends Staff {
         }
         return false;
     }
-
-    makeOrder(){
+    setPhone(newPhoneNumber: number): number {
+        return this.phoneNumber = newPhoneNumber;
+    }
+    makeOrder() {
 
     }
 
