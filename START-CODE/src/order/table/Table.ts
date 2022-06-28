@@ -1,5 +1,5 @@
 import { Chair } from "../chair/Chair";
-import { TableCategory } from "./TableCategory/TableCategory";
+import { TableCategory } from "./tableCategory/TableCategory";
 
 
 
