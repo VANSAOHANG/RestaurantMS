@@ -5,8 +5,11 @@ import { Manager } from "./human/Staff/Manager";
 import { Receiptionist } from "./human/Staff/Receptionist";
 import { Waiter } from "./human/Staff/Waiter";
 import { TableSquare } from "./order/table/tableCategory/TableSquare";
+import { TableCircle } from "./order/table/tableCategory/TableCircle";
+import { TableRectangle } from "./order/table/tableCategory/TableRectangle";
 
 import { Restaurant } from "./Restaurant";
+import { Customer } from "./human/customer/Customer";
 
 let c = console.log
 let addressRestaurant = new Address("st 2004", "Phnom Penh");
@@ -27,13 +30,26 @@ let waiter5 = new Waiter('waiter5',25,Gender.MALE)
 
 let phandy = new Receiptionist('Phandy',20,Gender.FEMALE);
 let sarath = new Receiptionist('Sarath',22,Gender.MALE)
+let t1 = new TableSquare(1);
+let t2 = new TableCircle(2);
+let t3 = new TableRectangle(3);
+
+let Khy = new Customer(1);
+let Seiha = new Customer(2);
+let thib = new Customer(3);
+let sreyLeak = new Customer(4);
 
 saoSauth.setManager(manager1);
-saoSauth.hr.addStaff(vichetChef,TimChef,sophiemChef,ounChef,mengyiChef)
-saoSauth.hr.addStaff(waiter1,waiter2,waiter3,waiter4,waiter5)
-saoSauth.hr.addStaff(phandy,sarath)
-// c(saoSauth.hr)
-let t1 = new TableSquare(1);
-// c(t1)
+saoSauth.hr.addStaff(vichetChef,TimChef,sophiemChef,ounChef,mengyiChef);
+saoSauth.hr.addStaff(waiter1,waiter2,waiter3,waiter4,waiter5);
+saoSauth.hr.addStaff(phandy,sarath);
+
+t1.addCustomer(Khy)
+t1.addCustomer(Khy)
+t1.addCustomer(thib)
 saoSauth.tables.addTable(t1);
-c(saoSauth.tables)
+saoSauth.tables.addTable(t2);
+saoSauth.tables.addTable(t3);
+
+c(t1)
+// c(saoSauth.tables)

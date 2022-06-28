@@ -8,13 +8,15 @@ export enum Gender {
  * Any person in the hospital - common attributes
  */
 export abstract class Person {
-    protected phone?: number;
-
+    protected phoneNumber?: number;
     constructor(
         protected name: string,
         protected age: number,
         protected gender: Gender
     ) { }
 
-    abstract setPhone(newPhoneNumber: number): number
+
+    setPhone(newPhoneNumber: number): number {
+        return this.phoneNumber = newPhoneNumber;
+    }
 }

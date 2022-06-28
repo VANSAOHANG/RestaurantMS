@@ -1,15 +1,24 @@
-import { Chair } from "../chair/Chair";
-import { TableCategory } from "./TableCategory/TableCategory";
+import { Customer } from "../../human/customer/Customer";
+import { TableCategory } from "./tableCategory/TableCategory";
 
 
 
 export abstract class Table {
+    
+    protected customers: Customer[]=[];
+    constructor(private tableId: number,protected maxChairs: number, private tableCategory: TableCategory) { }
+    isEqualCustomer(other: Customer): boolean {
+        for(let customer of this.customers) {
+            if(other.isEqual(customer)) {
+                return true;
+            }
+        }
+        return false;
+    }
+    addCustomer(customer: Customer) {
 
-    private chairs: Chair[] = [];
-    constructor(private tableId: number, private maxChairs: number, private tableCategory: TableCategory) { }
-
-    addChair(newChair: Chair) {
-        this.chairs.push()
-
+        if(this.maxChairs > this.customers.length && ! this.isEqualCustomer(customer)){
+            this.customers.push(customer);
+        }
     }
 }

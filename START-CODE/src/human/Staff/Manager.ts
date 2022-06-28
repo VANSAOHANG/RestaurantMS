@@ -3,8 +3,6 @@ import { Staff, StaffCategory } from "./Staff";
 
 
 export class Manager extends Staff {
-    protected phoneNumber?: number;
-
 
     private staffCategory: StaffCategory = StaffCategory.MANAGER;
     constructor(name: string, age: number, gender: Gender) {

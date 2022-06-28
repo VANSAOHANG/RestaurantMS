@@ -3,8 +3,6 @@ import { Staff, StaffCategory } from "./Staff";
 
 
 export class Receiptionist extends Staff {
-    protected phoneNumber?: number;
-
 
     private staffCategory: StaffCategory = StaffCategory.RECEIPTIONIST;
     constructor(name: string, age: number, gender: Gender) {

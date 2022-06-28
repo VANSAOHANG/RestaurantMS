@@ -3,9 +3,6 @@ import { Staff, StaffCategory } from "./Staff";
 
 
 export class Waiter extends Staff {
-    protected phoneNumber?: number;
-
-
     private staffCategory: StaffCategory = StaffCategory.WAITER;
     constructor(name: string, age: number, gender: Gender) {
         super(name, age, gender);
@@ -22,9 +19,7 @@ export class Waiter extends Staff {
         }
         return false;
     }
-    setPhone(newPhoneNumber: number): number {
-        return this.phoneNumber = newPhoneNumber;
-    }
+
     createOrder() {
 
     }

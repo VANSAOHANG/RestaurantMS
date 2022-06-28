@@ -11,7 +11,6 @@ export enum StaffCategory {
  * A staff is a personn of the hospital with a salary
  */
 export abstract class Staff extends Person {
-  protected phoneNumber?: number;
 
   protected salary: number = 0; // by default
   constructor(
@@ -28,6 +27,5 @@ export abstract class Staff extends Person {
   getSalary() {
     return this.salary;
   }
-  abstract setPhone(newPhoneNumber: number): number ;
 }
 
