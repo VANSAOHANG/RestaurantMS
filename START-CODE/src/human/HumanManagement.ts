@@ -1,4 +1,4 @@
-import { Customer } from "./Customers/Customer";
+import { Customer } from "../human/customer/Customer";
 import { Staff } from "./Staff/Staff";
 
 export class HumanManagement {

@@ -1,5 +1,7 @@
-import { Customer } from "../HumanManager/Customers/Customer";
-import { MenuItem } from "./Menu/MenuItem";
+import { Customer } from "../human/customer/Customer";
+import { MenuItem } from "../stock/menu/MenuItem";
+
+
 
 export class Order { 
     private orderItem: MenuItem[] = [];

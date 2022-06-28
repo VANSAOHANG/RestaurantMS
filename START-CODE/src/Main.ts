@@ -4,6 +4,7 @@ import { Cheft } from "./HumanManager/Staff/Chef";
 import { Manager } from "./HumanManager/Staff/Manager";
 import { Receiptionist } from "./HumanManager/Staff/Receptionist";
 import { Waiter } from "./HumanManager/Staff/Waiter";
+import { TableSquare } from "./OrderManagement/Table/TableCategory/TableSquare";
 import { Restaurant } from "./Restaurant";
 
 let c = console.log
@@ -30,4 +31,8 @@ saoSauth.setManager(manager1);
 saoSauth.hr.addStaff(vichetCheft,TimCheft,sophiemCheft,ounCheft,mengyiCheft)
 saoSauth.hr.addStaff(waiter1,waiter2,waiter3,waiter4,waiter5)
 saoSauth.hr.addStaff(phandy,sarath)
-c(saoSauth.hr)
+// c(saoSauth.hr)
+let t1 = new TableSquare(1);
+// c(t1)
+saoSauth.tables.addTable(t1);
+c(saoSauth.tables)
