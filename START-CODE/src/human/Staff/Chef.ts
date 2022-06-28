@@ -2,16 +2,16 @@ import { Gender, Person } from "../Person";
 import { Staff, StaffCategory } from "./Staff";
 
 
-export class Cheft extends Staff {
+export class Chef extends Staff {
 
     protected phoneNumber?: number;
 
-    private staffCategory: StaffCategory = StaffCategory.CHEFT;
+    private staffCategory: StaffCategory = StaffCategory.CHEF;
     constructor(name: string, age: number, gender: Gender) {
         super(name, age, gender);
     }
 
-    isEqual(other: Cheft): boolean {
+    isEqual(other: Chef): boolean {
         if (
             this.name === other.name &&
             this.age === other.age &&

@@ -1,8 +1,8 @@
 import { Address } from "./Address";
-import { Table } from "./OrderManagement/Table/Table";
-import { TableManager } from "./OrderManagement/Table/TableManagement";
-import { HumanManagement } from "./HumanManager/HumanManagement";
-import { Manager } from "./HumanManager/Staff/Manager";
+import { HumanManagement } from "./human/HumanManagement";
+import { Manager } from "./human/Staff/Manager";
+import { TableManager } from "./order/table/TableManagement";
+
 
 export class Restaurant {
     constructor(private name: string,private address?:Address) { }

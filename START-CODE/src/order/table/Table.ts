@@ -1,4 +1,4 @@
-import { Chair } from "../Chair";
+import { Chair } from "../chair/Chair";
 import { TableCategory } from "./TableCategory/TableCategory";
 
 
