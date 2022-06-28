@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { Customer } from "../../human/customer/Customer";
+=======
+import { Chair } from "../chair/Chair";
+>>>>>>> b9b9d3484b59fbf3ae08c0139622c6e9f768520b
 import { TableCategory } from "./tableCategory/TableCategory";
 
 
