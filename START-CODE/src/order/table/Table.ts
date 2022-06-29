@@ -3,7 +3,7 @@ import { TableCategory } from "./tableCategory/TableCategory";
 
 
 
-export abstract class Table {
+export class Table {
     
     protected customers: Customer[]=[];
     constructor(private tableId: number,protected maxChairs: number, private tableCategory: TableCategory) { }
@@ -20,5 +20,11 @@ export abstract class Table {
         if(this.maxChairs > this.customers.length && ! this.isEqualCustomer(customer)){
             this.customers.push(customer);
         }
+    }
+    isHasCustomer():boolean{
+        if(this.customers.length > 0){
+            return true;
+        }
+        return false;
     }
 }

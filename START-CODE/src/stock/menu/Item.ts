@@ -1,8 +1,16 @@
-export abstract class Item {
-    constructor (protected name: string, protected quantity: number, protected price:number){}
+import { MenuCategory } from "./Menu";
 
-    abstract  getName():string;
-    abstract getQuantity():number;
-    abstract getPrice():number;
+export class Item {
+    constructor (protected name: string, protected quantity: number, protected price:number){}
+    getName(){
+        return this.name;
+    }
+    getQuantity(){
+        return this.quantity;
+    }
+
+    getPrice(){
+        return this.price;
+    }
 
 }

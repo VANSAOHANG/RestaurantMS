@@ -22,18 +22,7 @@ export class Menu{
     addDessert(...dessert:Dessert[]){
         this.dessert = this.dessert.concat(dessert);
     }
-
-    debit (item:string, amount:number){
-        for (let food of this.food){
-            if (food.getName().search(item) &&food.getQuantity()>amount){
-                return true;
-            }
-            return false;
-        }
-    }
-    debitQuantityOfFood(item:string, amount:number){
-        if (this.debit(item, amount)){
-            this.beverages[item] - amount;
-        }
+    getBeverages(){
+        return this.beverages;
     }
 }

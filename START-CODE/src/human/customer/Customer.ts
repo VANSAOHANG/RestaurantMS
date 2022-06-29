@@ -7,4 +7,8 @@ export class Customer  {
         }
         return false;
     }
+
+    getCustomerId():number{
+        return this.customerId;
+    }
 }

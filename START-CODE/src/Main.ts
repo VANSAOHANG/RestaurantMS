@@ -12,6 +12,10 @@ import { Restaurant } from "./Restaurant";
 import { Customer } from "./human/customer/Customer";
 import { Drink } from "./stock/menu/beverages/Drink";
 import { Food } from "./stock/menu/foods/food";
+import { Order } from "./order/Order";
+import { Item } from "./stock/menu/Item";
+import { Dessert } from "./stock/menu/dessert/Dessert";
+import { OrderItem } from "./order/OrderItem";
 
 let c = console.log
 let addressRestaurant = new Address("st 2004", "Phnom Penh");
@@ -53,7 +57,7 @@ saoSauth.tables.addTable(t1);
 saoSauth.tables.addTable(t2);
 saoSauth.tables.addTable(t3);
 
-c(t1)
+// c(t1)
 // c(saoSauth.tables)
 
 let coca = new Drink("coca-cola", 50,2500);
@@ -70,8 +74,17 @@ let chicken_red_curry = new Food("Chicken red curry", 50,6000);
 let prahok_ktis = new Food("Prahok ktis", 50,12000);
 let nhom_banh_chok = new Food("Nhom banh chok", 50,6000);
 let somlor_korko = new Food("Somlor Korko", 50,5000);
+
 saoSauth.menu.addFood(lok_lak,amok,pork_rice,chicken_red_curry,prahok_ktis,nhom_banh_chok,somlor_korko);
 
-c(saoSauth.menu);
+let item1 = new Food('coca-cola',2,2500);
+let item3 = new Drink('oishi',2,2500);
+let item2 = new Dessert('Somlor Korko',1,2500);
+let orderItem = new OrderItem();
+orderItem.addItem(item1,item3,item2);
+let order1 = new Order(1,orderItem,t1);
+saoSauth.order.makeOrder(order1);
+// c(saoSauth.debitQuantityItem());
 // c(saoSauth.menu);
+// let order1 = new Order(1,)
 
