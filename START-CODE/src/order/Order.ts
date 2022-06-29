@@ -16,5 +16,9 @@ export class Order {
     getTableId() { return this.table};
 
     getOrderItem(){return this.orderItem};
+    
+    getOrderId(){
+        return this.orderId;
+    }
 
 }

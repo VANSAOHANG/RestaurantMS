@@ -1,3 +1,5 @@
+import { Order } from "../../order/Order";
+import { OrderManagement } from "../../order/OrderManagement";
 import { Gender, Person } from "../Person";
 
 export enum StaffCategory {
@@ -38,8 +40,6 @@ export abstract class Staff extends Person {
     return this.getStaffStatus;
   }
 
-  setStaffStatus(){
-    this.isStaffFree = false;
-  }
+
 }
 

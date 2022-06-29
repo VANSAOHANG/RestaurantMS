@@ -1,3 +1,5 @@
+import { Order } from "../../order/Order";
+import { OrderManagement } from "../../order/OrderManagement";
 import { Gender, Person } from "../Person";
 import { Staff, StaffCategory } from "./Staff";
 
@@ -23,6 +25,10 @@ export class Waiter extends Staff {
     getStaffCategory(){
         return this.staffCategory;
     }
+    
+    makeOrder(order:any ) {
+        let waiter = this as Staff;
 
+    }
     
 }

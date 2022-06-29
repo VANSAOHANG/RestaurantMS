@@ -1,5 +1,14 @@
+import { CustomerInvoice } from "../../human/customer/CustomerInvoice";
+import { Bill } from "./Bill";
 
 
 export class Payment { 
-    constructor(private paymenId: number,private billId: number){}
+    protected invoice : CustomerInvoice;
+    checkPayment():boolean{
+        if (this.invoice.getStatus()){
+            return true;
+        }
+        return false;
+    }
+    
 }
