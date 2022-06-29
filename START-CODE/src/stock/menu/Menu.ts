@@ -2,26 +2,38 @@
 import { Drink } from "./beverages/Drink";
 import { Dessert } from "./dessert/Dessert";
 import { Food } from "./foods/food";
-
+export enum MenuCategory {
+    FOOD, DESSERT, BEVERAGE
+}
 export class Menu{
-    public beverages: Drink[] = [];
+    public beverages: Drink[] = []
     public food: Food[] = [];
     public dessert: Dessert[] = [];
 
-    addDrinks(drink:Drink){
-        if (this.beverages.length >= 1){
-            for (let beverage of this.beverages){
-                if (!beverage.isEqual(drink.getName())){
-                    this.beverages.push(drink);
-                }else {
-                    beverage.getQuantity() += drink.getQuantity();
-                }
+    addDrinks(...drink:Drink[]){
+        for (let dr of this.beverages){
+        }
+        this.beverages = this.beverages.concat(drink);
+    }
+    addFood(...food:Food[]){
+        this.food = this.food.concat(food);
+    }
+
+    addDessert(...dessert:Dessert[]){
+        this.dessert = this.dessert.concat(dessert);
+    }
+
+    debit (item:string, amount:number){
+        for (let food of this.food){
+            if (food.getName().search(item) &&food.getQuantity()>amount){
+                return true;
             }
-            this.beverages.push(drink);
+            return false;
         }
     }
-}
-
-function isEqual(arg0: string) {
-    throw new Error("Function not implemented.");
+    debitQuantityOfFood(item:string, amount:number){
+        if (this.debit(item, amount)){
+            this.beverages[item] - amount;
+        }
+    }
 }

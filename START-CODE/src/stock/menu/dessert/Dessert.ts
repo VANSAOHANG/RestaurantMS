@@ -1,8 +1,21 @@
 import { Item } from "../Item";
+import { MenuCategory } from "../Menu";
 
 export class Dessert extends Item{
-
-    constructor (name:string, quantity:number){
-        super(name,quantity);
+    public dessert: MenuCategory = MenuCategory.DESSERT;
+    constructor (name:string, quantity:number,price:number){
+        super(name,quantity,price);
     }
+
+    getName(){
+        return this.name;
+    }
+    getQuantity(){
+        return this.quantity;
+    }
+
+    getPrice(){
+        return this.price;
+    }
+
 }

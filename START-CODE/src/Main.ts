@@ -10,6 +10,8 @@ import { TableRectangle } from "./order/table/tableCategory/TableRectangle";
 
 import { Restaurant } from "./Restaurant";
 import { Customer } from "./human/customer/Customer";
+import { Drink } from "./stock/menu/beverages/Drink";
+import { Food } from "./stock/menu/foods/food";
 
 let c = console.log
 let addressRestaurant = new Address("st 2004", "Phnom Penh");
@@ -53,3 +55,23 @@ saoSauth.tables.addTable(t3);
 
 c(t1)
 // c(saoSauth.tables)
+
+let coca = new Drink("coca-cola", 50,2500);
+let bacchus = new Drink("bacchus", 50,3000);
+let sting = new Drink("sting", 50,2500);
+let pepsi = new Drink("pepsi", 50,2500);
+let oishi = new Drink("oishi", 50,2500);
+saoSauth.menu.addDrinks(coca,bacchus,sting,pepsi,oishi);
+
+let lok_lak = new Food("lok lak", 50,25000);
+let amok = new Food("Amok", 50,1000);
+let pork_rice = new Food("Pork and rice", 50,5000);
+let chicken_red_curry = new Food("Chicken red curry", 50,6000);
+let prahok_ktis = new Food("Prahok ktis", 50,12000);
+let nhom_banh_chok = new Food("Nhom banh chok", 50,6000);
+let somlor_korko = new Food("Somlor Korko", 50,5000);
+saoSauth.menu.addFood(lok_lak,amok,pork_rice,chicken_red_curry,prahok_ktis,nhom_banh_chok,somlor_korko);
+
+c(saoSauth.menu);
+// c(saoSauth.menu);
+

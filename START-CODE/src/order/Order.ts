@@ -8,6 +8,7 @@ export class Order {
 
     constructor(private orderId: number, private customer: Customer){}
 
+
     makeOrder(item: MenuItem){
         this.orderItem.push(item);
     }

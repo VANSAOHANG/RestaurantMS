@@ -1,18 +1,10 @@
 import { Item } from "../Item";
+import { MenuCategory } from "../Menu";
 
-
-export enum DrinksCategory{
-    COCA_COLA,
-    PEPSI,
-    BACCHUS,
-    OISHI,
-    STING,
-    COFFEE,
-}
 export class Drink extends Item{
-
-    constructor (name:string, quantity:number){
-        super(name,quantity);
+    public drink :MenuCategory = MenuCategory.FOOD;
+   constructor (name:string, quantity:number,price:number){
+        super(name,quantity,price);
     }
 
     getName(){
@@ -22,10 +14,7 @@ export class Drink extends Item{
         return this.quantity;
     }
 
-    isEqual(other:string):boolean{
-        if (this.name === this.getName()){
-            return true;
-        }
-        return false;
+    getPrice(){
+        return this.price;
     }
 }
