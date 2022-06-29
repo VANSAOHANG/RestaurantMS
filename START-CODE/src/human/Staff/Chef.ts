@@ -4,7 +4,7 @@ import { Staff, StaffCategory } from "./Staff";
 
 export class Chef extends Staff {
 
-    private staffCategory: StaffCategory = StaffCategory.CHEF;
+    protected staffCategory: StaffCategory = StaffCategory.CHEF;
     constructor(name: string, age: number, gender: Gender) {
         super(name, age, gender);
     }

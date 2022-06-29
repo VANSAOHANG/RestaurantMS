@@ -15,7 +15,6 @@ export abstract class Person {
         protected gender: Gender
     ) { }
 
-
     setPhone(newPhoneNumber: number): number {
         return this.phoneNumber = newPhoneNumber;
     }

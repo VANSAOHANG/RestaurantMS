@@ -65,7 +65,7 @@ let bacchus = new Drink("bacchus", 50,3000);
 let sting = new Drink("sting", 50,2500);
 let pepsi = new Drink("pepsi", 50,2500);
 let oishi = new Drink("oishi", 50,2500);
-saoSauth.menu.addDrinks(coca,bacchus,sting,pepsi,oishi);
+saoSauth.menu.addItem(coca,bacchus,sting,pepsi,oishi);
 
 let lok_lak = new Food("lok lak", 50,25000);
 let amok = new Food("Amok", 50,1000);
@@ -75,7 +75,7 @@ let prahok_ktis = new Food("Prahok ktis", 50,12000);
 let nhom_banh_chok = new Food("Nhom banh chok", 50,6000);
 let somlor_korko = new Food("Somlor Korko", 50,5000);
 
-saoSauth.menu.addFood(lok_lak,amok,pork_rice,chicken_red_curry,prahok_ktis,nhom_banh_chok,somlor_korko);
+saoSauth.menu.addItem(lok_lak,amok,pork_rice,chicken_red_curry,prahok_ktis,nhom_banh_chok,somlor_korko);
 
 let item1 = new Food('coca-cola',2,2500);
 let item3 = new Drink('oishi',2,2500);
@@ -84,7 +84,8 @@ let orderItem = new OrderItem();
 orderItem.addItem(item1,item3,item2);
 let order1 = new Order(1,orderItem,t1);
 saoSauth.order.makeOrder(order1);
-// c(saoSauth.debitQuantityItem());
-// c(saoSauth.menu);
+// c(saoSauth.menu.debitQuantityItem());
+// c(saoSauth.hr.getStaffs());
+c(saoSauth.hr.createOrder())
 // let order1 = new Order(1,)
 

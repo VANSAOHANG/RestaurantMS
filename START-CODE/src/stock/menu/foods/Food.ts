@@ -1,10 +1,8 @@
-import { Item } from "../Item";
-import { MenuCategory } from "../Menu";
+import { Item, MenuCategory } from "../Item";
 
 export class Food extends Item{
-    // public food: MenuCategory = MenuCategory.FOOD;
-    constructor (name:string, quantity:number,price:number){
-        super(name,quantity,price);
+    constructor (name:string, quantity:number,price:number, food = MenuCategory.FOOD){
+        super(name,quantity,price,food);
     }
 
 }

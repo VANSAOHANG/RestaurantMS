@@ -1,5 +1,5 @@
 import { Customer } from "../human/customer/Customer";
-import { Staff } from "./Staff/Staff";
+import { Staff, StaffCategory } from "./Staff/Staff";
 
 export class HumanManagement {
     private staffs: Staff[] = [];
@@ -16,5 +16,16 @@ export class HumanManagement {
     }
     addCustomer(...newCustomer: Customer[]) {
         this.customers = this.customers.concat(newCustomer);
+    }
+
+    
+    createOrder() {
+        for (let staff of this.staffs){
+            if (staff.getStaffCategory() === StaffCategory.WAITER){
+                if (staff.getStaffStatus()){
+                    staff.setStaffStatus();
+                }
+            }
+        }
     }
 }

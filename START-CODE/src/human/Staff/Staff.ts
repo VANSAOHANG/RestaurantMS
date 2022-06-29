@@ -13,6 +13,8 @@ export enum StaffCategory {
 export abstract class Staff extends Person {
 
   protected salary: number = 0; // by default
+  protected staffCategory?:StaffCategory;
+  protected isStaffFree: boolean = true;
   constructor(
     name: string,
     age: number,
@@ -26,6 +28,18 @@ export abstract class Staff extends Person {
 
   getSalary() {
     return this.salary;
+  }
+
+  getStaffCategory(){
+    return this.staffCategory;
+  }
+
+  getStaffStatus(){
+    return this.getStaffStatus;
+  }
+
+  setStaffStatus(){
+    this.isStaffFree = false;
   }
 }
 

@@ -1,28 +1,29 @@
 
-import { Drink } from "./beverages/Drink";
-import { Dessert } from "./dessert/Dessert";
-import { Food } from "./foods/food";
-export enum MenuCategory {
-    FOOD, DESSERT, BEVERAGE
-}
+import { Item } from "./Item";
+
 export class Menu{
-    public beverages: Drink[] = []
-    public food: Food[] = [];
-    public dessert: Dessert[] = [];
+    protected items: Item[] = [];
 
-    addDrinks(...drink:Drink[]){
-        for (let dr of this.beverages){
-        }
-        this.beverages = this.beverages.concat(drink);
-    }
-    addFood(...food:Food[]){
-        this.food = this.food.concat(food);
+    addItem(...item:Item[]){
+        this.items = this.items.concat(item);
     }
 
-    addDessert(...dessert:Dessert[]){
-        this.dessert = this.dessert.concat(dessert);
+    getItemByCategory(){
+        return this.items;
     }
-    getBeverages(){
-        return this.beverages;
-    }
+
+    // debitQuantityItem(){
+    //     // let orders = this.order.getCustomersOrder();
+    //     for (let order of orders){
+    //         let ordered = order.getOrderItem();
+    //         for (let item of ordered.getOrderItem()){
+    //             for (let stockItem of this.getItemByCategory()){
+    //                 if (stockItem.isEqual(item)){
+    //                     stockItem.debitQuantity(item.getQuantity());
+    //                 }
+    //             }
+    //         }
+    //     }
+    //     return this.menu;
+    // }
 }
