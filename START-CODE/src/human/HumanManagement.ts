@@ -18,14 +18,5 @@ export class HumanManagement {
         this.customers = this.customers.concat(newCustomer);
     }
 
-    
-    createOrder() {
-        for (let staff of this.staffs){
-            if (staff.getStaffCategory() === StaffCategory.WAITER){
-                if (staff.getStaffStatus()){
-                    staff.setStaffStatus();
-                }
-            }
-        }
-    }
+
 }

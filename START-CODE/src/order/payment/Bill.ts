@@ -1,4 +1,4 @@
-import { Customer } from "../../human/customer/Customer";
+
 import { CustomerInvoice } from "../../human/customer/CustomerInvoice";
 import { Order } from "../Order";
 

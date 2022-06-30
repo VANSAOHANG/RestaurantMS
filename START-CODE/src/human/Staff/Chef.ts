@@ -24,7 +24,4 @@ export class Chef extends Staff {
     setPhone(newPhoneNumber: number): number {
         return this.phoneNumber = newPhoneNumber;
     }
-    takeOrder() {
-
-    }
 }

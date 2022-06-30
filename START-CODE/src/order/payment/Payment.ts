@@ -1,5 +1,5 @@
 import { CustomerInvoice } from "../../human/customer/CustomerInvoice";
-import { Bill } from "./Bill";
+
 
 
 export class Payment { 

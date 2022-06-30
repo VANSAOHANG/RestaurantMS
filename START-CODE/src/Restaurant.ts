@@ -24,7 +24,7 @@ export class Restaurant {
         for (let order of orders){
             let ordered = order.getOrderItem();
             for (let item of ordered.getOrderItem()){
-                for (let stockItem of this.menu.getItemByCategory()){
+                for (let stockItem of this.menu.getItem()){
                     if (stockItem.isEqual(item)){
                         stockItem.debitQuantity(item.getQuantity());
                     }

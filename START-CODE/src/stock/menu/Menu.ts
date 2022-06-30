@@ -8,7 +8,7 @@ export class Menu{
         this.items = this.items.concat(item);
     }
 
-    getItemByCategory(){
+    getItem(){
         return this.items;
     }
 
