@@ -36,4 +36,9 @@ export class Restaurant {
     setManager(newManager:Manager){
         this.manager = newManager;
     }
+
+    getManager(){
+        return this.manager;
+    }
+
 }

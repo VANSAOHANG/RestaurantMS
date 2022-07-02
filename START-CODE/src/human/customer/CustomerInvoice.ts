@@ -13,7 +13,8 @@ export class CustomerInvoice {
     customerInvoice(ordered:Order,totalBill:number){
         let invoice = "";
         for (let item of ordered.getOrderItem().getOrderItem()){
-            invoice += "name: " +   item.getName() + " amount:" + item.getQuantity() + " price:" + item.getPrice()+ "/1" + " ,";
+            invoice += "name:" +   item.getName() + ", amount:" + item.getQuantity() + ", price:" + item.getPrice()+ "/1 ; ";
+            // console.log(invoice);
             
         }
         this.itemOrdered  = invoice;

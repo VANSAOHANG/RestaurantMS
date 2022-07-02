@@ -23,4 +23,6 @@ export class Manager extends Staff {
     setPhone(newPhoneNumber: number): number {
         return this.phoneNumber = newPhoneNumber;
     }
+
+    
 }
